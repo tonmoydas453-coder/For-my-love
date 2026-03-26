@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For my love "Nistha Debi"</title>
+    <style>
+        :root {
+            --space-dark: #0b0d17;
+            --heart-red: #ff3860;
+            --star-gold: #ffd700;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #0b0d17 0%, #1a1c2c 100%);
+            font-family: 'Trebuchet MS', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+
+        /* Music Box */
+        .music-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid var(--heart-red);
+        }
+
+        /* Romantic Title Card */
+        .title-card {
+            z-index: 10;
+            text-align: center;
+            padding: 40px;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--heart-red);
+            box-shadow: 0 0 50px rgba(255, 56, 96, 0.4);
+            animation: pulse-border 2s infinite;
+        }
+
+        h1 {
+            color: var(--heart-red);
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .romantic-line {
+            font-size: 1.6rem;
+            color: #ffb7c5;
+            margin-top: 15px;
+        }
+
+        /* The Rocket Animation */
+        .rocket-container {
+            position: absolute;
+            bottom: -150px;
+            left: 20%;
+            animation: launch 4s cubic-bezier(.17,.67,.83,.67) infinite;
+        }
+
+        .rocket {
+            font-size: 100px;
+            transform: rotate(-45deg);
+            display: inline-block;
+        }
+
+        .fire-trail {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            font-size: 40px;
+            animation: shake 0.1s infinite;
+        }
+
+        .love-cargo {
+            position: absolute;
+            top: -30px;
+            left: 40px;
+            font-size: 30px;
+        }
+
+        /* Stars & Nicknames */
+        .star {
+            position: absolute;
+            color: var(--star-gold);
+            animation: twinkle 1.5s infinite;
+        }
+
+        .nickname {
+            position: absolute;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.2rem;
+        }
+
+        /* Animations */
+        @keyframes launch {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(120vw, -120vh) scale(0.5); opacity: 0; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 56, 96, 0.4); }
+            50% { box-shadow: 0 0 60px rgba(255, 56, 96, 0.8); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="music-box">
+        <audio controls autoplay loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        <div style="font-size: 12px; text-align: center;">Play for Butu ❤️</div>
+    </div>
+
+    <div class="title-card">
+        <h1>Celestial Love for Nistha</h1>
+        <p class="romantic-line">My Bubbu, my Butu, my whole world forever.</p>
+    </div>
+
+    <div class="nickname" style="top: 15%; left: 10%;">Bubbu ✨</div>
+    <div class="nickname" style="bottom: 20%; right: 15%;">Butu 💖</div>
+    
+    <div class="star" style="top: 5%; left: 30%;">⭐</div>
+    <div class="star" style="top: 40%; left: 80%;">✨</div>
+    <div class="star" style="bottom: 10%; left: 50%;">⭐</div>
+
+    <div class="rocket-container">
+        <div class="love-cargo">❤️💖💕</div>
+        <div class="rocket">🚀</div>
+        <div class="fire-trail">🔥🔥🔥</div>
+    </div>
+
+</body>
+</html>
